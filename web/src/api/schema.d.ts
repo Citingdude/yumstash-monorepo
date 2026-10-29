@@ -1,4 +1,4 @@
-/** Starter contract. Regenerate from the running API with npm run api:generate. */
+/** Starter contract. Regenerate from the running API with pnpm api:generate. */
 export interface paths {
   '/api/health': {
     get: {

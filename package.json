@@ -1,11 +1,11 @@
 {
   "name": "yumstash",
   "private": true,
-  "workspaces": ["web"],
   "scripts": {
-    "dev:web": "npm run dev --workspace web",
-    "build": "npm run build --workspace web",
-    "typecheck": "npm run typecheck --workspace web",
-    "api:generate": "npm run api:generate --workspace web"
-  }
+    "dev:web": "pnpm --filter web dev",
+    "build": "pnpm --filter web build",
+    "typecheck": "pnpm --filter web typecheck",
+    "api:generate": "pnpm --filter web api:generate"
+  },
+  "packageManager": "pnpm@12.16.1"
 }
