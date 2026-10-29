@@ -24,3 +24,7 @@ With the API running, execute `pnpm api:generate` to regenerate `web/src/api/sch
 Run `cargo test --workspace` and `pnpm build`. Add versioned migrations under `api/migrations` and apply them with `sqlx migrate run --source api/migrations` (requires `sqlx-cli` and `DATABASE_URL`). Migrations are not run automatically. No authentication or application-specific data model is included yet.
 
 The JavaScript packages use pnpm workspaces; the Rust API uses the Cargo workspace. Turbo is not needed for one frontend package and can be added if the repository grows enough to benefit from task orchestration and caching.
+
+## API structure
+
+The API is organized into vertical feature slices under `api/src/features`. Each slice owns its routes, HTTP handlers, request and response types, OpenAPI annotations, and tests. As features grow, keep their business logic and database queries in that slice, splitting files when useful. Shared startup and middleware live in `main.rs` and `app.rs`. Register each slice's router and merge its OpenAPI document in `app.rs`.
