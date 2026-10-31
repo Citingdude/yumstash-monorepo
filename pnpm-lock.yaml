@@ -166,7 +166,7 @@ importers:
 
   .: {}
 
-  web:
+  apps/web:
     dependencies:
       openapi-fetch:
         specifier: ^0.15.0

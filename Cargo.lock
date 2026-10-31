@@ -2162,6 +2162,7 @@ dependencies = [
  "axum",
  "dotenvy",
  "serde",
+ "serde_json",
  "sqlx",
  "tokio",
  "tower",

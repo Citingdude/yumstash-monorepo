@@ -1,0 +1,12 @@
+# Prefer readable line breaks while keeping short expressions compact.
+max_width = 100
+fn_call_width = 60
+chain_width = 40
+struct_lit_width = 30
+struct_variant_width = 40
+array_width = 60
+
+# Use the conventional Rust indentation and keep imports ordered.
+hard_tabs = false
+tab_spaces = 4
+reorder_imports = true
